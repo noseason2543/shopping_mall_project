@@ -1,0 +1,2 @@
+ALTER TABLE user_service.users
+ALTER COLUMN role TYPE VARCHAR(255) USING role::VARCHAR(255);

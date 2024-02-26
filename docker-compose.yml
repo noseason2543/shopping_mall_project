@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  db-shopping-mall:
+    image: postgres:alpine
+    restart: always
+    environment:
+      POSTGRES_DB: db_shopping_mall
+      POSTGRES_USER: test
+      POSTGRES_PASSWORD: 1234
+    ports:
+      - "5434:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+volumes:
+  db_data:
